@@ -14,10 +14,11 @@
 
 </head>
 <body>
+    
     <section id="nav-bar">
         <nav class="navbar navbar-expand-lg navbar-light">
 
-            <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index"><img src="images/fitness.png"></a>@* href="#" asp-area="" asp-controller="Home" asp-action="Index" *@
+            <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index"><img src="\images\fitness.png"></a>@* href="#" asp-area="" asp-controller="Home" asp-action="Index" *@
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <i class="fa fa-bars"></i>
                 <!--        <span class="navbar-toggler-icon"></span>-->
@@ -25,7 +26,7 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" href="#top" >Home</a>
+                        <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#services">Services</a>
@@ -46,141 +47,9 @@
         </nav>
 
     </section>
+   
 
-
-    <!---------------------banner section------------------->
-
-    <section id="banner">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6">
-                    <p class="promo-title">Best Fitness Gym in Town</p>
-                    <p>Here is some text for you to fill later when the time is right</p>
-                    <a href="#"><img src="images/play.png" class="play-btn">Watch Tutorials</a>
-
-
-                </div>
-                <div class="col-md-6 text-center">
-
-                    <img src="images/gym.png" class="img-fluid">
-
-                </div>
-            </div>
-        </div>
-
-        <img src="images/wave1.png" class="bottom-img">
-
-    </section>
-
-
-    <!-----------------Services--------------->
-
-    <section id="services">
-        <div class="container text-center">
-            <h1 class="title">WHAT WE OFFER?</h1>
-            <div class="row text-center">
-                <div class="col-md-4 services">
-                    <img src="images/personaltrainer.png" class="service-img">
-                    <h4>Personal Trainer</h4>
-                    <p>Ketu mund te gjeni nje personal trainer</p>
-                </div>
-                <div class="col-md-4 services">
-                    <img src="images/classes2.png" class="service-img">
-                    <h4>Group Classes</h4>
-                    <p>Ketu mund te gjeni nje personal trainer</p>
-                </div>
-                <div class="col-md-4 services">
-                    <img src="images/area.png" class="service-img third">
-                    <h4>Gym Area</h4>
-                    <p>Ketu mund te gjeni nje personal trainer</p>
-                </div>
-            </div>
-            <button type="button" class="btn btn-primary">All Services</button>
-        </div>
-    </section>
-
-
-
-    <!------------About Us---------->
-
-    <section id="about-us">
-        <div class="container ">
-            <h1 class="title text-center">WHY CHOOSE US ?</h1>
-            <div class="row">
-                <div class="col-md-6 about-us">
-                    <p class="about-title">Why we're different</p>
-                    <ul>
-                        <li>We beleive that we will transform your body</li>
-                        <li>We believe in your potential</li>
-                        <li>Friendly environment</li>
-                        <li>Not a gym, but family</li>
-                        <li>We'll stick by you throughout your journey</li>
-                        <li>We'll turn you into the best your bloodline has ever seen</li>
-                    </ul>
-                </div>
-                <div class="col-md-6">
-                    <img src="images/About_us.png" class="img-fluid">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!----------------------Products------------------>
-
-    <section id="products">
-        <div class="container text-center">
-            <h1 class="title">WHAT WE RECOMMEND ?</h1>
-            <div class="row text-center">
-                <div class="col-md-4 products">
-                    <img src="images/whey1.png" class="product-img">
-                    <h4>Whey Gold Standard</h4>
-                    <p>Ketu mund te gjeni nje personal trainer</p>
-                </div>
-                <div class="col-md-4 products">
-                    <img src="images/whey2.png" class="product-img">
-                    <h4>EVL Whey Protein</h4>
-                    <p>Ketu mund te gjeni nje personal trainer</p>
-                </div>
-                <div class="col-md-4 products">
-                    <img src="images/whey3.png" class="product-img third">
-                    <h4>Biosteel Whey Protein</h4>
-                    <p>Ketu mund te gjeni nje personal trainer</p>
-                </div>
-                <div class="col-md-4 products">
-                    <img src="images/whey4.png" class="product-img fourth">
-                    <h4>Dymatize Whey Protein</h4>
-                    <p>Ketu mund te gjeni nje personal trainer</p>
-                </div>
-                <div class="col-md-4 products">
-                    <img src="images/whey5.png" class="product-img fifth">
-                    <h4>Scitec Whey Protein</h4>
-                    <p>Ketu mund te gjeni nje personal trainer</p>
-                </div>
-                <div class="col-md-4 products">
-                    <img src="images/whey6.png" class="product-img sixth">
-                    <h4>Super Advanced Whey Protein</h4>
-                    <p>Ketu mund te gjeni nje personal trainer</p>
-                </div>
-            </div>
-            <button type="button" class="btn btn-primary">All Products</button>
-        </div>
-    </section>
-
-    <!--------------------------Social Media-------------------->
-    <section id="social-media">
-        <div class="container text-center">
-            <p>FIND US ON SOCIAL MEDIA</p>
-            <div class="social-icons">
-                <a href="#"><img src="images/facebook-icon.png"></a>
-                <a href="#"><img src="images/instagram-icon.png"></a>
-                <a href="#"><img src="images/twitter-icon.png"></a>
-                <a href="#"><img src="images/whatsapp-icon.png"></a>
-                <a href="#"><img src="images/linkedin-icon.png"></a>
-                <a href="#"><img src="images/snapchat-icon.png"></a>
-            </div>
-        </div>
-
-    </section>
+    
 
     
     @* <header>
@@ -210,14 +79,23 @@
             </div>
         </nav>
     </header> *@
-   
     <!----------------------Footer Section------------------->
+    
+   
+    <main role="main" >
+        @RenderBody()
+    </main>
+   
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
     <section id="footer">
-        <img src="images/wave2.png" class="footer-img">
+        <img src="\images\wave2.png" class="footer-img">
         <div class="container">
             <div class="row">
                 <div class="col-md-4 footer-box">
-                    <img src="images/fitness.png">
+                    <img src="\images\fitness.png">
                     <p>
                         Get the latest news from us by subscribing to our newsletter
                         for more works like website development, Digital Marketing, graphics designing and a lot more
@@ -240,16 +118,10 @@
             <hr>
             <p class="copyright">Website created by Sardi Kuka</p>
         </div>
-        <div class="container">
-            <main role="main" class="pb-3">
-                @RenderBody()
-            </main>
-        </div>
+
 
     </section>
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
-    @await RenderSectionAsync("Scripts", required: false)
 </body>
+
+
 </html>
