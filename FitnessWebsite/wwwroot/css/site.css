@@ -108,6 +108,12 @@ body {
     width: 350px;
     padding-left: 1px;
 }
+.nav-link:hover {
+    color: #4372E5;
+    background-color: #4372E5;
+    transition: 0.4s;
+    box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #4372E5;
+}
 
 /*----------------------Services-------------------------*/
 #services {
