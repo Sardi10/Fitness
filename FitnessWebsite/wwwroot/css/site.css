@@ -147,7 +147,7 @@ body {
     margin-left: auto;
     margin-right: auto;
     display: block;
-    transform: translateY(63px);
+    transform: translateY(54px);
 }
 
 .title::after {
@@ -215,7 +215,7 @@ body {
 .products h4 {
     padding: 5px;
     margin-top: 25px;
-    text-transform: uppercase;
+   text-transform: uppercase;
 }
 
 #products .btn-primary {
@@ -279,6 +279,7 @@ body {
         background-image: linear-gradient(to right, #75A4FF, #2F5ED1);
     }
 
+
     .footer-box .form-control {
         box-shadow: none !important;
         border: none;
@@ -309,10 +310,11 @@ html {
     scroll-behavior: smooth;
 }
 
+/*------------Index View for Category-------------*/
 
-
-
-
+.text-end .fa {
+    margin-right: 8px;
+}
 
 
 
