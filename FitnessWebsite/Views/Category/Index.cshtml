@@ -1,56 +1,67 @@
 ﻿@model List<Category>
 
 
-    <div class="container p-3">
-        <div class="row pt-4">
-            <div class="col-6">
-                <h2 class="text-primary">
-                    Category List
-                </h2>
-            </div>
-            <div class="col-6 text-end">
-            <a asp-controller="Category" asp-action="Create" class="btn btn-primary" style=" border-radius: 5px">
-                    <i class="fa bi bi-plus-circle"></i> Create New Category
-                </a>
+<div class="container ">
+    <div class="card shadow border-0 mt-4" style=" border-radius: 10px">
+        <div class="card-header  ml-0 py-3" @* style="background:#007bff" *@ style="background-image: linear-gradient(to right, #75A4FF, #2F5ED1);border-radius: 10px">
+            <div class="row">
+                @*  bg-primary bg-gradient #007bff *@
+                <div class="col-12 text-center">
+                    <h3 class="text-white py-2">Category List</h3>
+                </div>
             </div>
         </div>
-        <br />
-        <table class="table table-bordered table-striped" style="width:100%">
-            <thead>
-                <tr>
-                <th scope="col">
-                        Category Name
-                    </th>
-                <th scope="col">
-                        Display Order
-                    </th>
-                    <th class="w-25" scope="col"></th>
-                </tr>
-            </thead>
-    
-        <tbody>
-            @foreach (var obj in Model.OrderBy(u => u.DisplayOrder))
-             {
-              <tr>
-                 <td >@obj.Name</td>
-                 <td>
-                        @obj.DisplayOrder
-                 </td>
-                 <td>
-                     <div class="w-45 btn-group" role="group">
-                            <a asp-controller="Category" asp-action="Edit" asp-route-id="@obj.Id" class="w-40 btn btn-primary mx-2" style=" border-radius: 5px">
-                                <i class="bi bi-pencil-square"> EDIT</i>
-                         </a>
-                            <a asp-controller="Category" asp-action="Delete" asp-route-id="@obj.Id" class="btn btn-danger mx-2" style=" border-radius: 5px">
-                                <i class="bi bi-trash3-fill"> Delete</i>
-                            </a>
-                     </div>
-                 </td>
-              </tr>
-             }
+        <div class="card-body mb-1 ">
+                <div class="row  ">
+                    <div class="col-6">                       
+                    </div>
+                    <div class="col-6 text-end">
+                        <a asp-controller="Category" asp-action="Create" class="btn btn-primary" style=" border-radius: 5px">
+                            <i class="fa bi bi-plus-circle"></i> Create New Category
+                        </a>
+                    </div>
+                </div>
+                <br />
+                <table class="table table-bordered table-striped" style="width:100%">
+                    <thead>
+                        <tr >
+                            <th scope="col">
+                                Category Name
+                            </th>
+                            <th scope="col">
+                                Display Order
+                            </th>
+                            <th class="w-25" scope="col"></th>
+                        </tr>
+                    </thead>
 
-        </tbody>
-        </table>
+                    <tbody >
+                        @foreach (var obj in Model.OrderBy(u => u.DisplayOrder))
+                        {
+                            <tr>
+                                <td>@obj.Name</td>
+                                <td>
+                                    @obj.DisplayOrder
+                                </td>
+                            <td  style="padding: 5px; vertical-align: middle;">
+                                    <div class=" btn-group" role="group">
+                                    <a asp-controller="Category" asp-action="Edit" asp-route-id="@obj.Id" class=" btn btn-primary " style=" border-radius: 5px; margin-left: 15px;">
+                                            <i class="bi bi-pencil-square"> EDIT</i>
+                                        </a>
+                                    <a asp-controller="Category" asp-action="Delete" asp-route-id="@obj.Id" class=" btn btn-danger mx-2" style=" border-radius: 5px">
+                                            <i class="bi bi-trash3-fill"> Delete</i>
+                                        </a>
+                                    </div>
+                                </td>
+                            </tr>
+                        }
+
+                    </tbody>
+                </table>          
         </div>
+    </div>
+</div>
+
+   
     
        
