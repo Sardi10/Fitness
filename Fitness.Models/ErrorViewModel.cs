@@ -1,4 +1,4 @@
-namespace FitnessWebsite.Models
+namespace Fitness.Models
 {
     public class ErrorViewModel
     {

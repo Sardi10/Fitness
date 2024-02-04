@@ -2,7 +2,7 @@
 
 #nullable disable
 
-namespace FitnessWebsite.Migrations
+namespace Fitness.DataAccess.Migrations
 {
     /// <inheritdoc />
     public partial class AddCategoryTableToDb : Migration

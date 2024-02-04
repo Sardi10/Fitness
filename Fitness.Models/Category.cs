@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 
-namespace FitnessWebsite.Models
+namespace Fitness.Models
 {
     public class Category
     {

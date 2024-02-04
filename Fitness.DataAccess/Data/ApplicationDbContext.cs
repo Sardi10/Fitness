@@ -1,13 +1,14 @@
-﻿using FitnessWebsite.Models;
+﻿using Fitness.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace FitnessWebsite.Data
+namespace Fitness.DataAccess.Data
 {
+
     public class ApplicationDbContext : DbContext
     {
-        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options) 
+        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
         {
-            
+
         }
 
         public DbSet<Category> Categories { get; set; }

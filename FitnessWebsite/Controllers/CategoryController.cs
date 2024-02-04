@@ -1,6 +1,7 @@
-﻿using FitnessWebsite.Data;
+﻿using Fitness.DataAccess.Data;
+using Fitness.Models;
 using Microsoft.AspNetCore.Mvc;
-using FitnessWebsite.Models;
+
 
 namespace FitnessWebsite.Controllers
 {
