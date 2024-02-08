@@ -94,20 +94,29 @@
     <!----------------------Footer Section------------------->
 
     
+    @*  <footer class="footer">
+        <div class="container">
 
+            <hr>
+            <p class="copyright">Website created by Sardi Kuka</p>
+        </div>
+    </footer>  *@
 
     <main role="main" >
         <partial name="_Notifications" />
         @RenderBody()
+        
 
     </main>
     
+   
    
    
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     @* <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script> *@
     <script src="~/js/site.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)
+    
     
     
 </body>

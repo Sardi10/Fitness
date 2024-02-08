@@ -1,0 +1,52 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Linq.Expressions;
+using System.Text;
+using System.Threading.Tasks;
+using Fitness.DataAccess.Data;
+using Fitness.DataAccess.Repository.IRepository;
+using Microsoft.EntityFrameworkCore;
+
+namespace Fitness.DataAccess.Repository
+{
+    public class Repository<T> : IRepository<T> where T : class
+    {
+        private readonly ApplicationDbContext _db;
+        internal DbSet<T> dbSet;
+        public Repository(ApplicationDbContext db)
+        {
+            _db = db;
+            this.dbSet = _db.Set<T>();
+            //_dbCategories == dbSet
+            
+        }
+        public void Add(T entity)
+        {
+            dbSet.Add(entity);    //_db.Categories.Add();
+        }
+
+        public T Get(Expression<Func<T, bool>> filter)
+        {
+            IQueryable<T> query = dbSet;
+            query = query.Where(filter);
+            return query.FirstOrDefault();   //Category? categoryFromDb2 = _db.Categories.Where(u=>u.Id==id).FirstOrDefault();
+        }
+
+        public IEnumerable<T> GetAll()
+        {
+            IQueryable<T> query = dbSet;
+            return query.ToList();
+        }
+
+        public void Remove(T entity)
+        {
+            dbSet.Remove(entity);
+        }
+
+        public void RemoveRange(IEnumerable<T> entity)
+        {
+            dbSet.RemoveRange(entity);
+        }
+    }
+}
