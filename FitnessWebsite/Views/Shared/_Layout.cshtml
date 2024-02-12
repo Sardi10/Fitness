@@ -6,13 +6,12 @@
     <title>@ViewData["Title"] - FitnessWebsite</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/FitnessWebsite.styles.css" asp-append-version="true" />
-    @*<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"> *@
+    <link rel="stylesheet" href="~/FitnessWebsite.styles.css" asp-append-version="true" />   
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" />
-   @*  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>  *@
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"></script>
+    @* <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"></script> *@
+
 
 </head>
 <body>
@@ -21,34 +20,43 @@
         
         <nav class="navbar navbar-expand-lg navbar-light">
             
-            <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index"><img src="\images\fitness.png"></a>
+            <a class="navbar-brand" asp-area="Customer" asp-controller="Home" asp-action="Index"><img src="\images\fitness.png"></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <i class="fa fa-bars"></i>
                 <!--        <span class="navbar-toggler-icon"></span>-->
             </button>
             <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
             <ul class="navbar-nav flex-grow-1">
-            <li class="nav-item">
-                <a class="nav-link text-dark" asp-area="" asp-controller="Category" asp-action="Index">Category</a>
-            </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-white" href="#" type="button" data-bs-toggle="dropdown" aria-expanded="true">
+                            Dropdown
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a class="dropdown-item text-dark"  asp-area="Admin" asp-controller="Category" asp-action="Index">Category</a>
+                            </li>                           
+                            <li><hr class="dropdown-divider"></li>                          
+                        </ul>
+                    </li>
+           
             </ul>
             </div>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                        <a class="nav-link text-white" asp-area="Customer" asp-controller="Home" asp-action="Index">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#services">Services</a>
+                        <a class="nav-link text-white" href="#services">Services</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#about-us">About Us</a>
+                        <a class="nav-link text-white" href="#about-us">About Us</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#products">Products</a>
+                        <a class="nav-link text-white" href="#products">Products</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#footer">Contact Us</a>
+                        <a class="nav-link text-white" href="#footer">Contact Us</a>
                     </li>
 
                 </ul>
@@ -58,7 +66,7 @@
 
     </section>
 
- 
+
    
 
     
@@ -74,6 +82,7 @@
                 </button>
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
+
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                         </li>
@@ -94,13 +103,13 @@
     <!----------------------Footer Section------------------->
 
     
-    @*  <footer class="footer">
+      @* <footer class="footer">
         <div class="container">
 
             <hr>
             <p class="copyright">Website created by Sardi Kuka</p>
         </div>
-    </footer>  *@
+    </footer>   *@
 
     <main role="main" >
         <partial name="_Notifications" />
@@ -108,12 +117,9 @@
         
 
     </main>
-    
-   
-   
    
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    @* <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script> *@
+     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script> 
     <script src="~/js/site.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)
     

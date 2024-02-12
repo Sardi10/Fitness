@@ -33,6 +33,8 @@ body {
     margin-left: auto;
 }
 
+
+
 #nav-bar {
     position: sticky;
     top: 0;
@@ -55,11 +57,13 @@ body {
 }
 
     .navbar-nav li a {
-        color: #fff !important;
+       
         font-weight: 600;
         float: right;
         text-align: left;
     }
+
+
 
 .fa-bars {
     color: #fff;
